@@ -60,16 +60,16 @@ class BitboardState:
         for i in [58, 61]:
                 self.bitboards['black_bishop'] |= SQUARE_MASKS[i]
 
-        for i in [4]:
+        for i in [3]:  # d1 - Queen on d-file
             self.bitboards['white_queen'] |= SQUARE_MASKS[i]
 
-        for i in [60]:
+        for i in [59]:  # d8
             self.bitboards['black_queen'] |= SQUARE_MASKS[i]
 
-        for i in [3]:
+        for i in [4]:  # e1 - King on e-file
                 self.bitboards['white_king'] |= SQUARE_MASKS[i]
 
-        for i in [59]:
+        for i in [60]:  # e8
                 self.bitboards['black_king'] |= SQUARE_MASKS[i]
 
 
@@ -82,4 +82,3 @@ class BitboardState:
 
     def load_fen(self, fen_str):
         pass
-
